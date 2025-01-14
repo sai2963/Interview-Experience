@@ -1,5 +1,5 @@
 "use client";
-import { PrismaClient } from "@prisma/client";
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
@@ -11,8 +11,7 @@ export default function Submissions() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const { toast } = useToast();
-  const Prisma = new PrismaClient;
-  const prisma=Prisma;
+ 
   
   useEffect(() => {
     fetchSubmissions();

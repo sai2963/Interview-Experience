@@ -1,5 +1,7 @@
 "use client";
 
+
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
@@ -64,10 +66,10 @@ export default function NewSubmission() {
     }));
   };
 
-  if (!session) {
-    router.push("/login");
-    return null;
-  }
+  // if (!session) {
+  //   router.push("/login");
+  //   return null;
+  // }
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-2xl">
